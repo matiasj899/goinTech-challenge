@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link ,useHistory} from "react-router-dom";
 import "../components/header.css";
 import clienteAxios from "../config/axios";
 
 function Header() {
   const [categories, setCategories] = useState([]);
   const [showCategories, setShowCategories] = useState(false);
+const history=useHistory();
 
   useEffect(() => {
     clienteAxios
@@ -17,7 +18,7 @@ function Header() {
   console.log(categories);
   const eachCategory = categories.map((category) => (
     <li key={category}>
-      <Link to={`categories/${category}`}>{category}</Link>
+      <p onClick={()=>history.push(`/categories/${category}`)}>{category}</p>
     </li>
   ));
   return (

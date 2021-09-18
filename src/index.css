@@ -19,3 +19,6 @@ nav{
     justify-content: space-between;
     color: #fff;
 }
+#category{
+  display: flex;
+}

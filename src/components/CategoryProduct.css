@@ -1,0 +1,20 @@
+.product-cn {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    height: 400px;
+    justify-content: space-around;
+}
+
+.product-cn .product-img-cn {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-cn .product-img-cn img {
+    width: inherit;
+}

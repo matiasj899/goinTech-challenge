@@ -1,5 +1,6 @@
 import React from 'react';
+import Header from '../../components/Header';
 function Cart(){
-    return(<h1>Cart</h1>)
+    return(<Header></Header>)
 }
 export default Cart
