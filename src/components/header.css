@@ -1,0 +1,13 @@
+nav .nav-logo, .navbar-ul li a{
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar-ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   list-style: none;
+}
+
