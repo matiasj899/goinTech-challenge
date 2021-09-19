@@ -26,7 +26,7 @@ const history=useHistory();
       <header>
         <nav>
           <Link to="/" className="nav-logo">
-            GoinTech
+            ABC
           </Link>
           <form>
             <label>

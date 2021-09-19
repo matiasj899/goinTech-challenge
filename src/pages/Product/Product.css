@@ -1,0 +1,8 @@
+.product-detail-cn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.product-detail-img-cn{
+    width: 30%;
+}
