@@ -3,6 +3,8 @@ import { Link ,useHistory} from "react-router-dom";
 import "../components/header.css";
 import clienteAxios from "../config/axios";
 
+
+
 function Header() {
   const [categories, setCategories] = useState([]);
   const [showCategories, setShowCategories] = useState(false);
@@ -42,9 +44,15 @@ const history=useHistory();
               Categories
               <ul className="eachCategory" >
                 {showCategories ?  eachCategory  : null}
-                {showCategories ?  <li onClick={()=>history.push(`/categories/all`)}>See all</li>  : null}
+                {showCategories ?  <li onClick={()=>history.push(`/categories/all`)} className='category-li'>See all</li>  : null}
                
               </ul>
+            </li>
+            <li>
+              <Link to="/sell">Sell</Link>
+            </li>
+            <li>
+              <Link to="/singin">Sing in</Link>
             </li>
             <li>
               <Link to="/cart">Cart</Link>

@@ -14,7 +14,9 @@
     position: absolute;
     top: 45%;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .home-cards{
    
@@ -42,6 +44,7 @@ color: teal;
 cursor: pointer;
  }
  .home-cards button:hover{
+     color: orange;
    text-decoration: underline;
    
  }

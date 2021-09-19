@@ -4,6 +4,7 @@ import ImageGallery from "react-image-gallery";
 import "../../pages/Home/Home.css";
 import clienteAxios from "../../config/axios";
 import { useHistory } from "react-router-dom";
+import Footer from '../../components/Footer'
 
 const images = [
   { original: "https://m.media-amazon.com/images/I/61TD5JLGhIL._SX3740_.jpg" },
@@ -62,6 +63,7 @@ function Home() {
           </div>
         </div>
       </section>
+      <Footer></Footer>
     </>
   );
 }

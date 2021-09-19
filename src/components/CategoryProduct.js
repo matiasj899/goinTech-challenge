@@ -14,10 +14,7 @@ function CategoryProduct({ props }) {
       </div>
       <div className="title-and-price-cn">
         <p>{props.title}</p>
-        <p>
-          US${props.price}
-         
-        </p>
+        <p>US${props.price}</p>
       </div>
     </div>
   );
