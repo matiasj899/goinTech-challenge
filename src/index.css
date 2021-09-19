@@ -41,3 +41,38 @@ nav.pagination {
     align-items: center;
     margin-bottom: 100px;
 }
+#signin-cn{
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#signin-cn .form-cn{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    height: 300px;
+    
+}
+#signin-cn .form-cn, input{
+  
+    border: 1px #ddd solid;
+    border-radius: 5px;
+    
+}
+#signin-cn .form-cn form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70%;
+}
+#signin-cn .form-cn form label{
+  display: flex;
+  flex-direction: column;
+ 
+}
+#signin-cn .form-cn form .submit-btn{
+  background: #f0c14b;
+  height: 30px;
+ 
+}

@@ -27,6 +27,7 @@ function Sell() {
       <Header></Header>
       {token ? (
         <div>
+            <h1>Sell</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <label>
               Title
@@ -74,13 +75,18 @@ function Sell() {
               <h2>Sell on Gointech</h2>
               <button onClick={() => history.push("/singin")}>Sign Up</button>
             </div>
-            <div className='sell-info'>
+            <div className="sell-info">
               <h3>Become an Gointech seller</h3>
               <p>
                 More than half the units sold in our stores are from independent
                 sellers.
               </p>
-              <button onClick={() => history.push("/singin")} className='big-btn'>Sign Up</button>
+              <button
+                onClick={() => history.push("/singin")}
+                className="big-btn"
+              >
+                Sign Up
+              </button>
             </div>
           </section>
           <Footer></Footer>
