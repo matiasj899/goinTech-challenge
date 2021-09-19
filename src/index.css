@@ -24,5 +24,6 @@ nav{
   display: flex;
 }
 #home{
-  background-color: #EAEDED
+  background-color: #EAEDED;
+  height: 100vmax;
 }

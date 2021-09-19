@@ -42,6 +42,8 @@ const history=useHistory();
               Categories
               <ul className="eachCategory" >
                 {showCategories ?  eachCategory  : null}
+                {showCategories ?  <li onClick={()=>history.push(`/categories/all`)}>See all</li>  : null}
+               
               </ul>
             </li>
             <li>
