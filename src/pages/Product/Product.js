@@ -10,14 +10,14 @@ function Product() {
   const productId = useParams();
   const [product, setProduct] = useState([]);
   const [value, setValue] = useState(2);
-  const[count,setCount]=useState('')
+  const [count, setCount] = useState("");
   useEffect(() => {
     clienteAxios
       .get(`products/${productId.id}`)
       .then((res) => {
         setProduct(res.data);
         setValue(res.data.rating.rate);
-        setCount(res.data.rating.count)
+        setCount(res.data.rating.count);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -32,14 +32,27 @@ function Product() {
             zoomScale={2}
           ></InnerImageZoom>
         </div>
-        <div>
+        <div className="product-detail-info">
           <h1>{product.title}</h1>
           <div>
             <Rating name="read-only" value={value} readOnly />
-            <p>{count} ratings</p>
+            <p className='ratings'>{count} ratings</p>
           </div>
-         <p>${product.price}</p>
+          <p>
+            Price <span className="product-detail-price">${product.price}</span>
+          </p>
           <p>{product.description}</p>
+        </div>
+        <div className='add-and-buy'>
+          <p>Arrives: Sep 22 - 30</p>
+          <p>Deliver to Argentina</p>
+          <button className='add-cart-btn'>
+            Add to Cart
+          </button>
+          <button className='buy-btn'>
+Buy Now
+          </button>
+          
         </div>
       </div>
     </>

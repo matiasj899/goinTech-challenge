@@ -1,0 +1,17 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+.image-gallery-left-nav, .image-gallery-right-nav {
+    padding: 50px 10px;
+    top: 20%;
+    transform: translateY(-50%);
+}
+.image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+    height: 80px;
+    width: 40px;
+}
+.home-cards{
+    position: absolute;
+    top: 45%;
+    width: 250px;
+    background-color: white;
+    height: 400px;
+}

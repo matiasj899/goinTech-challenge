@@ -17,8 +17,8 @@ const history=useHistory();
 
   console.log(categories);
   const eachCategory = categories.map((category) => (
-    <li key={category}>
-      <p onClick={()=>history.push(`/categories/${category}`)}>{category}</p>
+    <li key={category} className='category-li' onClick={()=>history.push(`/categories/${category}`)}>
+      <p >{category}</p>
     </li>
   ));
   return (

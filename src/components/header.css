@@ -21,6 +21,12 @@ nav .nav-logo, .navbar-ul li a{
 }
 .navbar-ul li{
     margin-right: 40px;
+    margin-right: 40px;
+    padding: 10px;
+}
+.navbar-ul .eachCategory-cn .eachCategory .category-li:hover{
+    margin: 0;
+   background-color: #34455a;
 }
 
 .eachCategory{
@@ -33,4 +39,5 @@ nav .nav-logo, .navbar-ul li a{
     border-radius: 5px;
     padding-top: 20px;
     padding-bottom: 20px;
+    z-index: 6;
 }
