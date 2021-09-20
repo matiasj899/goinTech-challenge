@@ -1,5 +1,5 @@
 goinTech - Challenge Frontend
-Tienda online para el desafio frontend de Rooftop.
+Tienda online para el desafio frontend de goinTech.
 
 Instrucciones de instalación.👨‍💻👩‍💻
 1-Instalar node.js y npm
