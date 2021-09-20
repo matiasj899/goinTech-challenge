@@ -6,6 +6,7 @@ import InnerImageZoom from "react-inner-image-zoom";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 import "../Product/Product.css";
 import { Rating } from "@mui/material";
+import Footer from "../../components/Footer";
 function Product() {
   const productId = useParams();
   const [product, setProduct] = useState([]);
@@ -66,6 +67,7 @@ function Product() {
           <button className="buy-btn">Buy Now</button>
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 }

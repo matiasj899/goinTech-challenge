@@ -38,7 +38,7 @@ function Cart() {
       <Header></Header>
       <h2 className='category-title'>Cart</h2>
       <div className="cart-page-cn">
-        <div>{cartItems}</div>
+        <div className='carts-wrapper'>{cartItems}</div>
         <div className="total-cn">
           <p>
             Subtotal ({cartProducts.length} items): <span>${finalPrice}</span>

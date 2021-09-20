@@ -51,13 +51,23 @@
     text-decoration: underline;
 }
 
-@media(min-width:1024px) {
+@media(max-width:1024px) {
     #home {
         height: 120vmax;
     }
 }
 
 @media(min-width:1080px) {
+    #home {
+        height: 120vmax;
+    }
+}
+@media(min-width:1360px) {
+    #home {
+        height: 90vmax;
+    }
+}
+@media(min-width:1440px) {
     #home {
         height: 60vmax;
     }
