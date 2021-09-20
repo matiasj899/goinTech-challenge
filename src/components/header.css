@@ -12,6 +12,9 @@ nav .nav-logo, .navbar-ul li a{
     text-decoration: none;
     margin: 10px;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 }
 .navbar-ul{
     display: flex;
@@ -40,4 +43,9 @@ nav .nav-logo, .navbar-ul li a{
     padding-top: 20px;
     padding-bottom: 20px;
     z-index: 6;
+}
+#cart-icon{
+    
+    width: 20px;
+    height: 20px;
 }

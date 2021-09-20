@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "../components/header.css";
 import clienteAxios from "../config/axios";
-
-import AsyncSelect from "react-select/async";
-
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import cartImg from './shopping-cart-solid.svg'
 function Header() {
   const [categories, setCategories] = useState([]);
   const [showCategories, setShowCategories] = useState(false);
   const [searchData, setSearchData] = useState([]);
-  const [value, setValue] = useState("asd");
   const history = useHistory();
   const token = JSON.parse(localStorage.getItem("user"));
   console.log(token);
@@ -33,18 +32,6 @@ function Header() {
       <p>{category}</p>
     </li>
   ));
- 
-  const info='info'
-  function searcher(e) {
-    console.log(e)
-    //const search = e.target.value.toLowerCase().replace(/\s/g, "");
-    const dataFilter = info.filter((data) => {
-      const title = data.title.toLowerCase().replace(/\s/g, "");
-      //return title.includes(search);
-    });
-
-    setValue(dataFilter);
-  }
   return (
     <>
       <header>
@@ -52,18 +39,7 @@ function Header() {
           <Link to="/" className="nav-logo">
             ABC
           </Link>
-          <form>
-            <label>
-              <AsyncSelect
-                isMulti
-                defaultOptions={info}
-             onInputChange={searcher}
-              ></AsyncSelect>
-            </label>
-            <label>
-              <input type="submit"></input>
-            </label>
-          </form>
+         
 
           <ul className="navbar-ul">
             <li
@@ -101,7 +77,7 @@ function Header() {
               </li>
             )}
             <li>
-              <Link to="/cart">Cart</Link>
+              <Link to="/cart"><img src={cartImg} alt='cart' id='cart-icon'></img>Cart</Link>
             </li>
           </ul>
         </nav>
