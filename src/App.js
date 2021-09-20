@@ -5,6 +5,7 @@ import Product from "./pages/Product/Product";
 import Cart from "./pages/Cart/Cart";
 import Sell from "./pages/Sell/Sell";
 import SingIn from "./components/SingIn";
+
 function App() {
   return (
     <Router>

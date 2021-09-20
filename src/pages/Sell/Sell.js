@@ -27,8 +27,9 @@ function Sell() {
       <Header></Header>
       {token ? (
         <div>
-            <h1>Sell</h1>
-          <form onSubmit={handleSubmit(onSubmit)}>
+            <h1 className='category-title'>Sell a new product</h1>
+            <div className='sell-form-cn'>
+            <form onSubmit={handleSubmit(onSubmit)}>
             <label>
               Title
               <input
@@ -67,6 +68,8 @@ function Sell() {
             {errors.title && <span>This field is required</span>}
             <input type="submit"></input>
           </form>
+            </div>
+         
         </div>
       ) : (
         <>

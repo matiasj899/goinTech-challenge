@@ -26,6 +26,7 @@ nav .nav-logo, .navbar-ul li a{
     margin-right: 40px;
     margin-right: 40px;
     padding: 10px;
+    cursor: pointer;
 }
 .navbar-ul .eachCategory-cn .eachCategory .category-li:hover{
     margin: 0;

@@ -37,7 +37,7 @@ console.log(e.target.value)
   return (
     <>
       <Header></Header>
-      <h1>{categoryData.id}</h1>
+      <h1 className='category-title'>{categoryData.id}</h1>
       <section id="category">{eachProduct}</section>
       <div className="pagination-cn">
         <Pagination

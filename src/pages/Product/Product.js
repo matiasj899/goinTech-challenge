@@ -11,7 +11,11 @@ function Product() {
   const [product, setProduct] = useState([]);
   const [value, setValue] = useState(2);
   const [count, setCount] = useState("");
+  let cart = [];
   useEffect(() => {
+    if (localStorage.getItem("cart") === null) {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
     clienteAxios
       .get(`products/${productId.id}`)
       .then((res) => {
@@ -22,6 +26,16 @@ function Product() {
       .catch((err) => console.log(err));
   }, []);
   console.log(product);
+  function addToCart() {
+    if (localStorage.getItem("cart")) {
+      const cartArray = localStorage.getItem("cart");
+      const a = JSON.parse(cartArray);
+      const c = a.push(product);
+      const b = [...a];
+      console.log(b);
+      localStorage.setItem("cart", JSON.stringify(b));
+    }
+  }
   return (
     <>
       <Header></Header>
@@ -36,23 +50,20 @@ function Product() {
           <h1>{product.title}</h1>
           <div>
             <Rating name="read-only" value={value} readOnly />
-            <p className='ratings'>{count} ratings</p>
+            <p className="ratings">{count} ratings</p>
           </div>
           <p>
             Price <span className="product-detail-price">${product.price}</span>
           </p>
           <p>{product.description}</p>
         </div>
-        <div className='add-and-buy'>
+        <div className="add-and-buy">
           <p>Arrives: Sep 22 - 30</p>
           <p>Deliver to Argentina</p>
-          <button className='add-cart-btn'>
+          <button className="add-cart-btn" onClick={addToCart}>
             Add to Cart
           </button>
-          <button className='buy-btn'>
-Buy Now
-          </button>
-          
+          <button className="buy-btn">Buy Now</button>
         </div>
       </div>
     </>

@@ -5,6 +5,10 @@
     align-items: center;
     height: 400px;
     justify-content: space-around;
+    border: 1px #ddd solid;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
 }
 
 .product-cn .product-img-cn {
@@ -23,4 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.title-and-price-cn{
+    margin: 10px;
 }
