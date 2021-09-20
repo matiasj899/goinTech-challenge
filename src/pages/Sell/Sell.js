@@ -84,7 +84,7 @@ function Sell() {
           </form>
           {advise?<div className='advise-cn'><p>New product created</p></div>:null}
             </div>
-        
+        <Footer></Footer>
         </div>
       ) : (
         <>
