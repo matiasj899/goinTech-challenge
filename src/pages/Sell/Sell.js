@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { useHistory } from "react-router";
 import Header from "../../components/Header";
 import { useForm } from "react-hook-form";
@@ -8,9 +8,11 @@ import "./Sell.css";
 function Sell() {
   const history = useHistory();
   const token = JSON.parse(localStorage.getItem("user"));
+  const [advise,setAdvise]=useState(false)
   const {
     register,
     handleSubmit,
+    reset,
     watch,
     formState: { errors },
   } = useForm();
@@ -18,7 +20,13 @@ function Sell() {
     clienteAxios
       .post("products", data)
       .then((res) => {
-        console.log(res);
+        if(res.status===200){
+          setAdvise(true)
+          reset({ email: "" });
+          setTimeout(() => {
+            setAdvise(false);
+          }, 3000);
+        };
       })
       .catch((err) => console.log(err));
   };
@@ -36,6 +44,7 @@ function Sell() {
                 type="text"
                 {...register("title", { required: true })}
               ></input>
+               {errors.title && <span>This field is required</span>}
             </label>
             <label>
               Price
@@ -43,6 +52,7 @@ function Sell() {
                 type="number"
                 {...register("price", { required: true })}
               ></input>
+               {errors.price && <span>This field is required</span>}
             </label>
             <label>
               Description
@@ -50,26 +60,31 @@ function Sell() {
                 type="text"
                 {...register("description", { required: true })}
               ></input>
+               {errors.description && <span>This field is required</span>}
             </label>
             <label>
               Upload a image
               <input
+              id='uploadImage'
                 type="file"
                 {...register("image", { required: true })}
               ></input>
+               {errors.image && <span>This field is required</span>}
             </label>
             <label>
               Category
               <input
+            
                 type="text"
                 {...register("category", { required: true })}
               ></input>
             </label>
-            {errors.title && <span>This field is required</span>}
-            <input type="submit"></input>
+            {errors.category && <span>This field is required</span>}
+            <input type="submit"   id='submit'></input>
           </form>
+          {advise?<div className='advise-cn'><p>New product created</p></div>:null}
             </div>
-         
+        
         </div>
       ) : (
         <>

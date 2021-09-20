@@ -7,9 +7,10 @@ import { Pagination } from "@mui/material";
 import Footer from "../../components/Footer";
 function Categories() {
   const categoryData = useParams();
+
   const [products, setProducts] = useState([]);
   const [limit, setLimit] = useState(10);
-  const [count,setCount]=useState(1)
+  const [count, setCount] = useState(1);
   useEffect(() => {
     if (categoryData.id !== "all") {
       clienteAxios
@@ -19,7 +20,7 @@ function Categories() {
     } else {
       clienteAxios
         .get(`products`)
-        .then((res) => setCount(res.data.length/10))
+        .then((res) => setCount(res.data.length / 10))
         .catch((err) => console.log(err));
       clienteAxios
         .get(`products?limit=${limit}`)
@@ -27,24 +28,32 @@ function Categories() {
         .catch((err) => console.log(err));
     }
   }, [categoryData.id, limit]);
-function changePage(e){
-console.log(e.target.value)
-}
+  const [page, setPage] = useState(1);
+  const handleChange = (event, value) => {
+    setPage(value);
+    
+    setLimit(10 * value);
+    const newPage=products.slice(limit-11,limit-1)
+    setProducts(newPage)
+   
+  };
+  
+  
   const eachProduct = products.map((product) => (
     <CategoryProduct key={product.id} props={product}></CategoryProduct>
   ));
-  console.log(products);
+  
   return (
     <>
       <Header></Header>
-      <h1 className='category-title'>{categoryData.id}</h1>
+      <h1 className="category-title">{categoryData.id}</h1>
       <section id="category">{eachProduct}</section>
       <div className="pagination-cn">
         <Pagination
           count={count}
           className="pagination"
-          value={1}
-          onChange={changePage}
+          page={page}
+          onChange={handleChange}
         ></Pagination>
       </div>
 

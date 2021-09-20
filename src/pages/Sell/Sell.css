@@ -83,3 +83,21 @@
 .sell-form-cn form label input{
     height: 40px;
 }
+#uploadImage{
+    height: unset;
+    
+}
+#submit{
+    background: #f0c14b;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    margin: 10px;
+}
+.advise-cn{
+    background-color: green;
+    color: white;
+    margin: 20px;
+    padding: 5px;
+    border: 5px;
+}

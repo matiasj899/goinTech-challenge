@@ -36,7 +36,7 @@ function Header() {
     <>
       <header>
         <nav>
-          <Link to="/" className="nav-logo">
+          <Link to="/" className="nav-logo" id='nav-logo'>
             ABC
           </Link>
          
